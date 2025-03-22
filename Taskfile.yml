@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - as snake.s -o out.o
+      - ld out.o -o out
+  run:
+    deps: [build]
+    cmds:
+      - ./out
